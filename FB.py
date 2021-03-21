@@ -169,7 +169,7 @@ def TROUVE_ENVOI(user_id,password):
 	message_box.send_keys(message)
 	time.sleep(10)
 	Envoi=browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div[2]/div/div/div/div/div/div[1]/div[2]/div/div/div/div[2]/div/form/div/div[3]/span[2]/div')
-	Envoi
+	Envoi.click()
 	time.sleep(5)
 TROUVE_ENVOI(user_id,password)
 # t = Timer(secs, TROUVE_ENVOI)
