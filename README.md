@@ -5,41 +5,25 @@ title: "| Facebook-Scraping : \n| Dites \"\\textit{Ciao!}\" au contact qui vous 
   de la liste d'amis  \n"
 author: "Lucic A., Moezzibadi, M., Mbengue M."
 date: "Mars 2021"
-output:
-  beamer_presentation:
-    latex_engine: xelatex
-    includes:
-      in_header: preamble.tex
-  slidy_presentation: default
-institute: Techniques de programmation - Python
-bibliography: references.bib
-theme: Madrid
-classoption: aspectratio=169
-header-includes:
-- \usepackage{bm}
-- \widowpenalties 1 150
-- \usepackage{amsmath}
-- \renewcommand{\bibname}{References}
-- \usepackage{booktabs}
-- \usepackage{tikz}
-- \usepackage{verbatim}
-- \usepackage{chronosys}
-- \usepackage{stackengine}
-- \usepackage[table, svgnames, dvipsnames]{xcolor}
-- \usetikzlibrary{arrows.meta}
-- \usetikzlibrary{arrows,decorations.markings}
-- \usetikzlibrary{intersections}
-- \usepackage[font=small]{caption}
-- \usepackage{adjustbox}
-- \usepackage{tabularx}
-- \usepackage{pgfplots}
-- \renewcommand{\bibname}{References}
-- \usepackage{subcaption}
-- \usepackage{wrapfig}
-- \usepackage[most]{tcolorbox}
-- \definecolor{light-yellow}{rgb}{1, 0.95, 0.7}
-- \newtcolorbox{myquote}{colback=light-yellow,grow to right by=-10mm,grow to left by=-10mm,boxrule=0pt,boxsep=0pt,breakable}
-- \newcommand{\todo}[1]{\begin{myquote} \textbf{Note :} \emph{#1} \end{myquote}}
+
+
+
+* [Selenium](https://www.selenium.dev)
+* [chromedriver](https://chromedriver.storage.googleapis.com/index.html)
+* [beautifulsoup](https://pypi.org/project/beautifulsoup4/)
+* [geckodriver](https://github.com/mozilla/geckodriver/releases)
+* [iedriver](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver)
+* 
+Associated with the above are five functions to download/manage the binaries:
+
+* `selenium(...)`
+* `chrome(...)`
+* `phantomjs(...)`
+* `gecko(...)`
+* `iedriver(...)`
+
+
+
 ---
 
 ```{r setup, include=FALSE}
