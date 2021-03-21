@@ -13,9 +13,8 @@ Liens outils :
 * [chromedriver](https://chromedriver.storage.googleapis.com/index.html)
 
 
-## Introduction
+## Objectifs du script
 
-Les objectifs du script sont: 
 1) Scraping des données sur Facebook
 2) Comparer la liste d'amis régulièrement
 3) Envoie de message automatique 
