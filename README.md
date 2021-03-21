@@ -1,10 +1,6 @@
 # Facebook_Scraping
  Scraping dynamique
 ---
-title: "| Facebook-Scraping : \n| Dites \"\\textit{Ciao!}\" au contact qui vous supprime
-  de la liste d'amis  \n"
-author: "Lucic A., Moezzibadi, M., Mbengue M."
-date: "Mars 2021"
 
 Dans le script on utilise deux outils pricipals:
 * Selenium automatise l'interaction du navigateur Web à partir de python en utilisant un exécutable (*webdriver*) afin de contrôler *Chrome ou Firefox* (on clic sur les boutons avec Selenium).
