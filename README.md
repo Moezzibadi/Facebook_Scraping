@@ -55,11 +55,23 @@ from selenium.webdriver.support import expected_conditions as EC
 
 ![Différents parties du code](Struc.png)
 
+# Autoriser l’automatisation à distance pour le navigateur
+
+Avant tous, il faut autoriser l'automatisation à distance pour le navigateur.
+
+<center> 
+
+![Automatisation à distance](Auto.png){width=27%}
+
+<center>
+
 # Ligne de commande
+
+Pour faire tourner le code dans Terminal on tape la commande suivante (remplacer *username* par votre identifiant):
 ```{python, echo=TRUE}
 python FB.py -p -u 'username'
 ```
-
+Ensuite il faut taper votre mot de passe (ça s'affiche pas dans Terminal)
 
 # Initialiser les fichiers des contacts
 - 3 ème partie : Créer un message pop-up pour initialiser les fichiers 
@@ -79,13 +91,6 @@ def PopUp(question):
 valid=PopUp(question) 
 ```
 
-- Autoriser l'automatisation à distance pour le navigateur
-
-<center> 
-
-![Automatisation à distance](Auto.png){width=27%}
-
-<center>
 
 # 4ème partie : Scraping 
 
