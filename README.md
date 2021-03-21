@@ -11,18 +11,12 @@ date: "Mars 2021"
 * [Selenium](https://www.selenium.dev)
 * [chromedriver](https://chromedriver.storage.googleapis.com/index.html)
 * [beautifulsoup](https://pypi.org/project/beautifulsoup4/)
-* [geckodriver](https://github.com/mozilla/geckodriver/releases)
-* [iedriver](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver)
-* 
+
 Associated with the above are five functions to download/manage the binaries:
 
-* `selenium(...)`
-* `chrome(...)`
-* `phantomjs(...)`
-* `gecko(...)`
-* `iedriver(...)`
-
-
+* Scraping des données sur Facebook  
+* Comparer la liste d’amis périodiquement
+* Envoi-de méssage automatique
 
 ---
 
