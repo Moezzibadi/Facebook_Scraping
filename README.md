@@ -55,6 +55,10 @@ from selenium.webdriver.support import expected_conditions as EC
 
 ![Différents parties du code](Struc.png)
 
+# Ligne de commande
+```{python, echo=TRUE}
+python FB.py -p -u 'username'
+```
 
 
 # Initialiser les fichiers des contacts
