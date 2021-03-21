@@ -6,7 +6,7 @@ title: "| Facebook-Scraping : \n| Dites \"\\textit{Ciao!}\" au contact qui vous 
 author: "Lucic A., Moezzibadi, M., Mbengue M."
 date: "Mars 2021"
 
-Dans le script on utilise trois outils :
+Dans le script on utilise deux outils pricipals:
 * Selenium automatise l'interaction du navigateur Web à partir de python en utilisant un exécutable (*webdriver*) afin de contrôler *Chrome (Firebox)* (on clic sur les boutons avec Selenium).
 * Beautifulsoup récupére l'information d'une balise HTML précise
 
@@ -15,16 +15,7 @@ Dans le script on utilise trois outils :
 * [chromedriver](https://chromedriver.storage.googleapis.com/index.html)
 
 
-Associated with the above are five functions to download/manage the binaries:
-
-* Scraping des données sur Facebook  
-* Comparer la liste d’amis périodiquement
-* Envoi-de méssage automatique
-
-
 # Introduction
-
-- **Envie de savoir qui vous a supprimé de ses amis en FB!**
 
 ### Objectifs :
 1) Scraping des données sur Facebook
@@ -32,32 +23,9 @@ Associated with the above are five functions to download/manage the binaries:
 3) Envoi-de message automatique 
 
 
-# Pourqoui Selenium?
-
-- Facebook n'est pas un site régulier avec un budget limité
-- Un système anti-bot très puissant
-- urllib.request => Document HTML incomplet
-- Selenium utilise un exécutable (*webdriver*) afin de contrôler *Chrome (Firebox)*
-- Une combinaison de Beautiful Soup et Selenium pour le **Scraping dynamique**
-
-### Importer les modules utilisés dans le but du Scraping 
-```{python, echo=TRUE}
-import time
-from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-```
-
-
-# Plan du code
-
-![Différents parties du code](Struc.png)
-
 # Autoriser l’automatisation à distance pour le navigateur
 
-Avant tous, il faut autoriser l'automatisation à distance pour le navigateur.
+Avant tous, il faut autoriser l'automatisation à distance pour le navigateur. Google Chrome ou Firefox doit être installé sur votre ordinateur.
 
 <center> 
 
@@ -71,7 +39,7 @@ Pour faire tourner le code dans Terminal on tape la commande suivante (remplacer
 ```{python, echo=TRUE}
 python FB.py -p -u 'username'
 ```
-Ensuite il faut taper votre mot de passe (ça s'affiche pas dans Terminal)
+Ensuite il faut taper votre mot de passe (ça s'affiche pas dans Terminal pour des raisons de sécurité)
 
 # Initialiser les fichiers des contacts
 - 3 ème partie : Créer un message pop-up pour initialiser les fichiers 
@@ -111,53 +79,11 @@ valid=PopUp(question)
 	browser = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 ```
 
-# 4ème partie : Scraping 
 
-- Se connecter avec les identifiants:
 
-```{python, eval=FALSE, size="scriptsize"}
-browser.implicitly_wait(10)
-browser.get("https://www.facebook.com")
-time.sleep(3)
-browser.find_element_by_xpath('//*[@title="Tout accepter"]').click()
-WebDriverWait(browser, 5).until(EC.element_to_be_clickable((By.XPATH,'//*[@title="Tout\
-... accepter"]'))).click()
-element=browser.find_element_by_id("email")
-element.send_keys(user_id)
-passwor=browser.find_element_by_id("pass")
-passwor.send_keys(password)
-time.sleep(3)
-clicker=browser.find_element_by_xpath('//*[@name="login"]')
-clicker.click()
-```
+# Plan du code
 
-\todo{Ça y est! On a réussi à se connecter.}
-
-# Scraping 
-
-- Charger la page de la liste d'amis:
-
-```{python, eval=FALSE, size="scriptsize"}
-	time.sleep(3)
-	browser.get("https://www.facebook.com/me/friends") 
-```
-
-- *execute_script*: Une interface qui permet d'executer les commandes de JavaScript:
-
-```{python, eval=FALSE, size="scriptsize"}
-	time.sleep(3)
-	##----Défiler vers le bas-------
-	while True:
-		browser.execute_script('window.scrollTo(0,document.body.scrollHeight);')
-		time.sleep(1)
-		browser.execute_script('window.scrollTo(0,0);')
-		time.sleep(1)
-		try:
-			exit_command=browser.find_element_by_xpath("//*[contains(text(),'Photos de vous')]")
-			break
-		except:
-			continue
-```
+![Différents parties du code](Struc.png)
 
 # Scraping 
 Having a blank slide at the end with the title "References" will put the detailed bibliography at the end.
