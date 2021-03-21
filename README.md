@@ -17,7 +17,7 @@ Liens outils :
 
 * Objectifs :*
 1) Scraping des données sur Facebook
-2) Comparer la liste d'amis périodiquement
+2) Comparer la liste d'amis régulièrement
 3) Envoie de message automatique 
 
 
