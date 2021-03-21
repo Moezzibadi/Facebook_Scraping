@@ -22,7 +22,7 @@ Liens outils :
 
 ## Autoriser l’automatisation à distance pour le navigateur 
 
-Avant tous, il faut autoriser l'automatisation à distance pour le navigateur. Google Chrome ou Firefox doit être installé sur votre ordinateur.
+Avant tout, il faut autoriser l'automatisation à distance pour le navigateur. Google Chrome ou Firefox doit être installé sur votre ordinateur.
 
 <center> 
 
