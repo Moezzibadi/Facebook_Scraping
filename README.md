@@ -10,6 +10,8 @@ Dans le script on utilise deux outils pricipals:
 * Selenium automatise l'interaction du navigateur Web à partir de python en utilisant un exécutable (*webdriver*) afin de contrôler *Chrome (Firebox)* (on clic sur les boutons avec Selenium).
 * Beautifulsoup récupére l'information d'une balise HTML précise
 
+Liens outils :
+
 * [beautifulsoup](https://pypi.org/project/beautifulsoup4/)
 * [Selenium](https://www.selenium.dev)
 * [chromedriver](https://chromedriver.storage.googleapis.com/index.html)
@@ -29,7 +31,7 @@ Avant tous, il faut autoriser l'automatisation à distance pour le navigateur. G
 
 <center> 
 
-![Automatisation à distance](Auto.png){width=27%}
+![Automatisation à distance](Auto.png)
 
 <center>
 
@@ -39,7 +41,7 @@ Pour faire tourner le code dans Terminal on tape la commande suivante (remplacer
 ```{python, echo=TRUE}
 python FB.py -p -u 'username'
 ```
-Ensuite il faut taper votre mot de passe (ça s'affiche pas dans Terminal pour des raisons de sécurité)
+Ensuite il faut taper votre mot de passe (ça s'affiche pas dans Terminal pour des raisons de sécurité).
 
 # Initialiser les fichiers des contacts
 - 3 ème partie : Créer un message pop-up pour initialiser les fichiers 
