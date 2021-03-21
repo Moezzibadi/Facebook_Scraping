@@ -2,7 +2,7 @@
  Scraping dynamique
 ---
 
-Dans le script on utilise deux outils pricipals:
+Dans le script on utilise deux outils principals:
 * Selenium automatise l'interaction du navigateur Web à partir de python en utilisant un exécutable (*webdriver*) afin de contrôler *Chrome ou Firefox* (on clic sur les boutons avec Selenium).
 * Beautifulsoup récupére l'information d'une balise HTML précise
 
