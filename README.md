@@ -7,7 +7,7 @@ author: "Lucic A., Moezzibadi, M., Mbengue M."
 date: "Mars 2021"
 
 Dans le script on utilise deux outils pricipals:
-* Selenium automatise l'interaction du navigateur Web à partir de python en utilisant un exécutable (*webdriver*) afin de contrôler *Chrome (Firebox)* (on clic sur les boutons avec Selenium).
+* Selenium automatise l'interaction du navigateur Web à partir de python en utilisant un exécutable (*webdriver*) afin de contrôler *Chrome ou Firefox* (on clic sur les boutons avec Selenium).
 * Beautifulsoup récupére l'information d'une balise HTML précise
 
 Liens outils :
@@ -37,59 +37,16 @@ Avant tous, il faut autoriser l'automatisation à distance pour le navigateur. G
 
 # Ligne de commande
 
-Pour faire tourner le code dans Terminal on tape la commande suivante (remplacer *username* par votre identifiant):
+Pour faire tourner le code dans le terminal on tape la commande suivante (remplacer *username* par votre identifiant):
 ```{python, echo=TRUE}
 python FB.py -p -u 'username'
 ```
-Ensuite il faut taper votre mot de passe (ça s'affiche pas dans Terminal pour des raisons de sécurité).
+Ensuite il faut taper votre mot de passe (ça s'affiche pas dans le terminal pour des raisons de sécurité).
 
-# Initialiser les fichiers des contacts
-- 3 ème partie : Créer un message pop-up pour initialiser les fichiers 
-```{python, eval=FALSE, size="tiny"}
-import sys #Question pop up
-question="Est-ce que c'est la première fois que vous lancez le code? "
-valid=True
-def PopUp(question):
-    valid = {"oui": True,"non": False}
-    while True:
-        sys.stdout.write(question)
-        choix = input().lower()
-        if choix in valid:
-            return valid[choix]
-        else:
-            sys.stdout.write("Veuillez répondre par 'oui' ou par 'non'. ")
-valid=PopUp(question) 
-```
-
-
-# 4ème partie : Scraping 
-
-
-- Désactiver les notifications
-<center> 
-
-![Demande d'affichage des notifications par FB](Notif.png){width=37%}
-
-<center>
-
-```{python, eval=FALSE, size="scriptsize"}
-# Créer une instance de ChromeOptions class :
-	options = webdriver.ChromeOptions()
-# Ajouter chrome switch pour désactiver la notification :
-	options.add_argument('--disable-notifications')
-# Passer l'instance de ChromeOptions à ChromeDriver Constructor :
-	browser = webdriver.Chrome(ChromeDriverManager().install(), options=options)
-```
-
-
+# Question Pop-Up 
+Le code doit créer la liste d'amis et la comparer avec la liste issue de la prochaine execution du code,  si c'est pour la première fois code vous executer le program. Donc il faut répondre "oui" ou "non" à la question qui s'affiche. Si la réponse est "non" le code trouve la personne qui vous a supprimé et lui envoi un méssage de "Ciao mon ami(e), Merci de ne pas répondre à ce message automatique."
 
 # Plan du code
 
 ![Différents parties du code](Struc.png)
 
-# Scraping 
-Having a blank slide at the end with the title "References" will put the detailed bibliography at the end.
-
-See [@Robertson1956-wn] for details.
-
-# References
