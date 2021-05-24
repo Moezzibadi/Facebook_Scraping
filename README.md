@@ -39,7 +39,7 @@ python FB.py -p -u 'username'
 Ensuite il faut taper votre mot de passe (ça s'affiche pas dans le terminal pour des raisons de sécurité).
 
 ## Question Pop-Up
-Le code doit créer la liste d'amis et la comparer avec la liste issue de la prochaine execution du code,  si c'est pour la première fois code vous executer le program. Donc il faut répondre "oui" ou "non" à la question qui s'affiche. Si la réponse est "non" le code trouve la personne qui vous a supprimé et lui envoie un méssage de "Ciao mon ami(e), Merci de ne pas répondre à ce message automatique."
+Le code doit créer la liste d'amis et la comparer avec la liste issue de la prochaine execution du code,  si c'est pour la première fois que vous executez le program. Donc il faut répondre "oui" ou "non" à la question qui s'affiche. Si la réponse est "non" le code trouve la personne qui vous a supprimé et lui envoie un méssage de "Ciao mon ami(e), Merci de ne pas répondre à ce message automatique."
 
 ## Plan du code
 
